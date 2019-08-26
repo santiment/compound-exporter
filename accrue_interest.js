@@ -1,6 +1,7 @@
 const { ETHExporter } = require('eth-exporter')
+const pkg = require('./package.json')
 
-const exporter = new ETHExporter("erc20-transfers")
+const exporter = new ETHExporter(pkg.name)
 
 const abi = [{
   "indexed": false,
